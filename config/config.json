@@ -6,7 +6,7 @@
   },
   
   "production": {
-    "database": "DATBASE_URL",
+    "database": "DATABASE_URL",
     "dialectOptions": {"ssl": { "require": true, "rejectUnauthorized": false }}
   }
 }
