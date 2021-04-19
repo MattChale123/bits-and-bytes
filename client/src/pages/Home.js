@@ -97,7 +97,7 @@ export default function Home() {
                         <div style={containerStyles}>
                             {posts.slice(0).reverse().map((post) => {
                                 return (
-                                    <Card style={styles}>
+                                    <Card style={styles} key={post.id}>
                                         <Card.Body>
                                             <Card.Text>{post.content}</Card.Text>
                                             <Comments postId={post.id} />

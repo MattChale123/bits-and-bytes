@@ -8,9 +8,13 @@ router.get('/', async function(req, res) {
     const posts = await models.Post.findAll({
         include: [
             {
-            model: models.User, 
-            attributes: ['userName', 'id']
-        }]
+                model: models.User, 
+                attributes: ['userName', 'id']
+            },
+            // {
+            //     model: model.Comment,
+            // }
+        ]
     })
 
     res.json(posts)
