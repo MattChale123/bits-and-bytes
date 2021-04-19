@@ -1,0 +1,12 @@
+{
+  "development": {
+    "database": "full_stackSolo",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  
+  "production": {
+    "database": "DATBASE_URL",
+    "dialectOptions": {"ssl": { "require": true, "rejectUnauthorized": false }}
+  }
+}
