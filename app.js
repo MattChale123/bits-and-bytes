@@ -10,6 +10,7 @@ const models = require('./models')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const postsRouter = require('./routes/posts')
+const quizRouter = require('./routes/quiz')
 
 
 var app = express();
@@ -35,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use('/', indexRouter);
 app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/posts', postsRouter);
+app.use('/api/v1/quiz', quizRouter)
 
 
 app.get('*', (req, res) => {

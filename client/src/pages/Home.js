@@ -12,6 +12,7 @@ import Comments from '../components/Comments';
 import navImage from '../img/cogs.jpeg'
 import background from '../img/main-page.jpeg'
 
+
 export default function Home() {
     const [ posts, setPosts ] = useState([])
     const [userStatus, setUserStatus] = useState('LOADING');
@@ -88,6 +89,7 @@ export default function Home() {
                     <Button as={Link} to='/login' style={{marginLeft: '10px'}}>Log In</Button>
                     <Button as={Link} to='/register' style={{marginLeft: '10px'}}>Register</Button>
                     <Button onClick={logout} style={{marginLeft: '10px'}}>Log Out</Button>
+                    <Button as={Link} to='/privacy' style={{marginLeft: '10px'}}>Privacy Policy</Button>
                 </div>
             </Navbar>
             <Container>
@@ -113,6 +115,7 @@ export default function Home() {
                     <Route path="/register">
                         <Register />
                     </Route>
+                    
                 </Switch>
             </Container>
         </div>

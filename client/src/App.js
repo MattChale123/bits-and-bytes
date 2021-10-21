@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router';
 import './App.css';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Privacy from './pages/Privacy';
 import Register from './pages/Register';
 
 
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path='/privacy'>
+          <Privacy />
         </Route>
       </Switch>
     </div>

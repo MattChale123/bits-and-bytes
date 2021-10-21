@@ -20,6 +20,8 @@ router.get('/', async function(req, res) {
     res.json(posts)
 });
 
+
+
 router.post('/', checkAuth, async (req, res) => {
     // check for all fields 
     if (!req.body.content) {
@@ -77,5 +79,27 @@ router.get('/:id/comments', async (req, res) => {
     });
     res.json(comments)
 })
+
+
+// router.get('/:movieId', (req, res) => {
+
+//     const movieId = req.params.movieId 
+
+//     // get the movie by id and all the reviews of that movie 
+//     models.Movie.findByPk(movieId, {
+//         include: [
+//             {
+//                 model: models.Review, 
+//                 as: 'reviews'
+//             }
+//         ]
+//     }).then(movie => {
+//         // movie.reviews.map 
+//         res.json(movie)
+//     })
+
+// })
+
+
 
 module.exports = router;
