@@ -12,13 +12,14 @@ var usersRouter = require('./routes/users');
 const postsRouter = require('./routes/posts')
 const quizRouter = require('./routes/quiz')
 
+var usersRouter = require('./server2/app');
 
 var app = express();
 
 const store = new SequelizeStore({ db: models.sequelize })
 app.use(
     session({
-      secret: 'whyhellothere',
+      secret: 'secret',
       resave: false,
       saveUninitialized: false,
       store: store,
